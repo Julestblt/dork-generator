@@ -1,9 +1,6 @@
 <script>
-	import Header from '$lib/layout/Header.svelte';
-	import QueryBuilder from '$lib/layout/QueryBuilder.svelte';
-	import Presets from '$lib/layout/Presets.svelte';
-	import Result from '$lib/layout/QueryResult.svelte';
-
+	import { Header, QueryBuilder, Presets, QueryResult } from '$lib/layout/';
+	import { MaterialUiConfig } from '$lib/config';
 	let inTitle = '';
 	let inUrl = '';
 	let domain = '';
@@ -22,7 +19,8 @@
 	$: result = `intitle:${inTitle} inurl:${inUrl} site:${domain} filetype:${fileType} ${textQuery} ${preset}`;
 </script>
 
+<MaterialUiConfig />
 <Header />
 <QueryBuilder {inTitle} {inUrl} {domain} {fileType} {textQuery} />
 <Presets {presets} {preset} />
-<Result {result} />
+<QueryResult {result} />
