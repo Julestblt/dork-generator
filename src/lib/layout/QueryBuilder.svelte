@@ -7,18 +7,60 @@
 <div class="query-builder">
 	<h2>Build the Query</h2>
 	<div>
-		<Textfield bind:value={inTitle} label="In Title:" />
+		<Textfield
+			class="shaped-filled"
+			variant="filled"
+			style="width: 100%;"
+			helperLine$style="width: 100%;"
+			bind:value={inTitle}
+			label="In Title:"
+		/>
 	</div>
 	<div>
-		<Textfield bind:value={inUrl} label="In URL:" />
+		<Textfield
+			class="shaped-filled"
+			variant="filled"
+			style="width: 100%;"
+			helperLine$style="width: 100%;"
+			bind:value={inUrl}
+			label="In URL:"
+		/>
 	</div>
 	<div>
-		<Textfield bind:value={domain} label="Domain:" />
+		<Textfield
+			class="shaped-filled"
+			variant="filled"
+			style="width: 100%;"
+			helperLine$style="width: 100%;"
+			bind:value={domain}
+			label="Domain:"
+		/>
 	</div>
 	<div>
-		<Textfield bind:value={fileType} label="File Type:" />
+		<Textfield
+			class="shaped-filled"
+			variant="filled"
+			style="width: 100%;"
+			helperLine$style="width: 100%;"
+			bind:value={fileType}
+			label="File Type:"
+		/>
 	</div>
 	<div>
-		<Textfield bind:value={textQuery} label="Text Query:" />
+		<Textfield
+			class="shaped-filled"
+			variant="filled"
+			style="width: 100%;"
+			helperLine$style="width: 100%;"
+			bind:value={textQuery}
+			label="Text Query:"
+		/>
 	</div>
 </div>
+
+<style>
+	div {
+		width: 100%;
+		margin: 0.7rem 0;
+	}
+</style>

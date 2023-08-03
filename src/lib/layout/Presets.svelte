@@ -1,12 +1,31 @@
 <script lang="ts">
-	export let presets: string[], preset: string;
+	import Select, { Option } from '@smui/select';
+	import type { Preset } from '$lib/types';
+
+	export let presets: Preset[], preset: string;
 </script>
 
 <div class="presets">
-	<h2>Presets:</h2>
-	<select bind:value={preset}>
-		{#each presets as presetOption}
-			<option>{presetOption}</option>
+	<h2>Presets :</h2>
+	<Select
+		class="shaped-filled"
+		variant="filled"
+		style="width: 100%;"
+		bind:value={preset}
+		label="Presets"
+	>
+		{#each presets as { label, value }}
+			<Option {value}>{label}</Option>
 		{/each}
-	</select>
+	</Select>
 </div>
+
+<style>
+	.presets {
+		margin-top: 3rem;
+	}
+
+	h2 {
+		margin: 0 0 1rem 0;
+	}
+</style>
