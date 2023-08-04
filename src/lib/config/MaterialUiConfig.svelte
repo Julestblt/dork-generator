@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores/theme';
-
-	onMount(() => {
-		$theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	});
 </script>
 
 <svelte:head>
