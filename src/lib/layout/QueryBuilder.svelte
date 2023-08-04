@@ -8,8 +8,7 @@
 	<h2>Build the Query</h2>
 	<div>
 		<Textfield
-			class="shaped-filled"
-			variant="filled"
+			variant="outlined"
 			style="width: 100%;"
 			helperLine$style="width: 100%;"
 			bind:value={inTitle}
@@ -18,8 +17,7 @@
 	</div>
 	<div>
 		<Textfield
-			class="shaped-filled"
-			variant="filled"
+			variant="outlined"
 			style="width: 100%;"
 			helperLine$style="width: 100%;"
 			bind:value={inUrl}
@@ -28,8 +26,7 @@
 	</div>
 	<div>
 		<Textfield
-			class="shaped-filled"
-			variant="filled"
+			variant="outlined"
 			style="width: 100%;"
 			helperLine$style="width: 100%;"
 			bind:value={domain}
@@ -38,8 +35,7 @@
 	</div>
 	<div>
 		<Textfield
-			class="shaped-filled"
-			variant="filled"
+			variant="outlined"
 			style="width: 100%;"
 			helperLine$style="width: 100%;"
 			bind:value={fileType}
@@ -48,8 +44,7 @@
 	</div>
 	<div>
 		<Textfield
-			class="shaped-filled"
-			variant="filled"
+			variant="outlined"
 			style="width: 100%;"
 			helperLine$style="width: 100%;"
 			bind:value={textQuery}

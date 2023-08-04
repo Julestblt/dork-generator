@@ -7,14 +7,8 @@
 
 <div class="presets">
 	<h2>Presets :</h2>
-	<Select
-		class="shaped-filled"
-		variant="filled"
-		style="width: 100%;"
-		bind:value={preset}
-		label="Presets"
-	>
-		{#each presets as { label, value }}
+	<Select variant="outlined" style="width: 100%;" bind:value={preset} label="Presets">
+		{#each presets as { label, value }, i (i)}
 			<Option {value}>{label}</Option>
 		{/each}
 	</Select>
