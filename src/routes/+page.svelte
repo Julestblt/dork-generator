@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Header, QueryBuilder, Presets, QueryResult } from '$lib/layout/';
+	import { QueryBuilder, Presets, QueryResult } from '$lib/layout/';
 	import { MaterialUiConfig } from '$lib/config';
 	import { buildResult } from '$lib/utils';
 	import { PRESETS } from '$lib/constants';
@@ -15,7 +15,6 @@
 </script>
 
 <MaterialUiConfig />
-<Header />
 <section class="main">
 	<div>
 		<QueryBuilder bind:inTitle bind:inUrl bind:domain bind:fileType bind:textQuery />
