@@ -10,7 +10,7 @@
 	};
 
 	const openDork = () => {
-		window.open(buildUrl(result), '_blank');
+		result !== '' && window.open(buildUrl(result), '_blank');
 	};
 
 	const sendToClipboard = () => {

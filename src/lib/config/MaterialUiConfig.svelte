@@ -1,6 +1,18 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { theme } from '$lib/stores/theme';
+
+	onMount(() => {
+		$theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	});
+</script>
+
 <svelte:head>
-	<link rel="stylesheet" href="/smui.css" media="(prefers-color-scheme: light)" />
-	<link rel="stylesheet" href="/smui-dark.css" media="screen and (prefers-color-scheme: dark)" />
+	{#if $theme === 'dark'}
+		<link rel="stylesheet" href="/smui-dark.css" />
+	{:else}
+		<link rel="stylesheet" href="/smui.css" />
+	{/if}
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 	<link
