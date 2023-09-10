@@ -1,7 +1,7 @@
 import type { Preset } from '$lib/types';
 
 export const GOOGLE_PRESETS: Preset[] = [
-	{ label: 'None', value: null },
+	{ label: '', value: '' },
 	{
 		label: 'Directory listing (Index of)',
 		value: 'intitle:index.of'
@@ -26,7 +26,7 @@ export const GOOGLE_PRESETS: Preset[] = [
 ];
 
 export const GITHUB_PRESETS: Preset[] = [
-	{ label: 'None', value: null },
+	{ label: '', value: '' },
 	{
 		label: 'API Keys & Tokens',
 		value:
