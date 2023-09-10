@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<h1>Google Dork Generator</h1>
+	<a href="/"><h1>Dork Generator</h1></a>
 	<IconButton
 		class="material-icons"
 		on:click={() => ($theme = $theme === 'dark' ? 'light' : 'dark')}
@@ -25,5 +25,11 @@
 	}
 	h1 {
 		font-size: 3rem;
+		color: inherit;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 </style>

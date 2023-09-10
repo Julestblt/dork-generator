@@ -1,36 +1,62 @@
-<script lang="ts">
-	import { QueryBuilder, Presets, QueryResult } from '$lib/layout/';
-	import { MaterialUiConfig } from '$lib/config';
-	import { buildResult } from '$lib/utils';
-	import { PRESETS } from '$lib/constants';
-
-	let inTitle: string = '';
-	let inUrl: string = '';
-	let domain: string = '';
-	let fileType: string = '';
-	let textQuery: string = '';
-	let preset: string = '';
-
-	$: result = buildResult(inTitle, inUrl, domain, fileType, textQuery, preset);
+<script>
+	import Card, { Content, Actions } from '@smui/card';
+	import { goto } from '$app/navigation';
+	import Button, { Label } from '@smui/button';
 </script>
 
-<MaterialUiConfig />
-<section class="main">
-	<div>
-		<QueryBuilder bind:inTitle bind:inUrl bind:domain bind:fileType bind:textQuery />
-		<Presets presets={PRESETS} bind:preset />
+<main>
+	<h1>Welcome to the Dork Tool</h1>
+	<h3>
+		This tool assists you in creating advanced search queries for specific platforms. Whether you're
+		looking to refine your searches on Google or seeking specific data on Github, we've got you
+		covered!
+	</h3>
+
+	<div class="platforms">
+		<div class="card-container">
+			<Card>
+				<Content>Google Dorks</Content>
+				<p>
+					Master the art of advanced search techniques on the world's most popular search engine.
+				</p>
+				<Actions fullBleed>
+					<Button style="font-weight:bold" on:click={() => goto('/google')}>
+						<Label>Go to</Label>
+						<i class="material-icons" aria-hidden="true">arrow_forward</i>
+					</Button>
+				</Actions>
+			</Card>
+		</div>
+		<div class="card-container">
+			<Card>
+				<Content>Github Dorks</Content>
+				<p>
+					Unlock the potential of finding specific and often sensitive information on Github
+					repositories.
+				</p>
+				<Actions fullBleed>
+					<Button style="font-weight:bold" on:click={() => goto('/github')}>
+						<Label>Go to</Label>
+						<i class="material-icons" aria-hidden="true">arrow_forward</i>
+					</Button>
+				</Actions>
+			</Card>
+		</div>
 	</div>
-	<QueryResult {result} />
-</section>
+</main>
 
 <style>
-	section {
+	.platforms {
 		display: flex;
+		gap: 2rem;
 	}
 
-	div {
-		flex-grow: 1;
-		max-width: 48%;
-		margin-right: 4%;
+	p {
+		padding: 0 16px;
+	}
+
+	h3 {
+		margin: 2rem 0;
+		font-weight: 400;
 	}
 </style>

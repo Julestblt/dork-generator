@@ -1,7 +1,9 @@
 <script>
 	import { Footer, Header } from '$lib/layout';
+	import { MaterialUiConfig } from '$lib/config';
 </script>
 
+<MaterialUiConfig />
 <section class="layout">
 	<main class="main">
 		<Header />

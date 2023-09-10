@@ -3,7 +3,7 @@
 </script>
 
 <footer class={$theme === 'dark' ? 'footer-dark' : 'footer-light'}>
-	<p>Made with &#9829; by <a href="https://github.com/Julestblt">JuleZ</a></p>
+	<p>Made with &#9829; by <a href="https://github.com/Julestblt" target="_blank">JuleZ</a></p>
 </footer>
 
 <style>
